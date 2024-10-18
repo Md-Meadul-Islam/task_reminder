@@ -1,0 +1,118 @@
+body {
+    width: 66.66vw;
+    height: 94vh;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Webkit (Chrome, Safari, newer versions of Opera) */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(78, 105, 95);
+    border-radius: 3px;
+}
+
+/* Firefox */
+::-moz-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-moz-scrollbar-thumb {
+    background-color: rgb(78, 105, 95);
+    border-radius: 3px;
+}
+
+/* Microsoft Edge and IE */
+::-ms-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-ms-scrollbar-thumb {
+    background-color: rgb(78, 105, 95);
+    border-radius: 3px;
+}
+
+::-ms-scrollbar-track {
+    background-color: transparent;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+}
+
+.bg-greenblue {
+    background: rgb(0, 32, 96);
+}
+
+.bg-greenblue2 {
+    background: rgb(32, 56, 100);
+}
+
+.vh-84 {
+    height: 84vh;
+}
+
+.vh-10 {
+    height: 10vh;
+}
+
+.maxw100px {
+    max-width: 100px;
+}
+
+.maxw200px {
+    max-width: 200px;
+}
+
+.maxh200px {
+    max-height: 200px;
+}
+
+.w100px {
+    width: 100px;
+}
+
+.overflowY-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.overflowX-scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/* add day start */
+.btn-checkbox label {
+    margin-right: 5px;
+}
+
+.btn-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.btn-checkbox input[type="checkbox"]+label {
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.btn-checkbox input[type="checkbox"]:checked+label {
+    background-color: #0a7e08;
+    color: white;
+}
+
+/* add day end */
