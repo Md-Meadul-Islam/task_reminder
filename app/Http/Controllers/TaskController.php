@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\TaskNotification;
 use App\Models\DayCategories;
 use App\Models\Tasks;
 use DateTimeZone;
@@ -42,6 +43,14 @@ class TaskController extends Controller
             ->groupBy(function ($task) {
                 return $task->alarm_time->format('H:00:00');
             })->toArray();
+
+        foreach ($tasks as $groupedTask) {
+            foreach ($groupedTask as $task) {
+                if ($task['alarm_time'] < $datetime) {
+                    broadcast(new TaskNotification($task));
+                }
+            }
+        }
         return view('task.index', compact('dayCategoriesArray', 'tasks'));
     }
     public function create()

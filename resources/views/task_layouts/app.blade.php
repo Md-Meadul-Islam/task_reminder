@@ -36,5 +36,17 @@
     <script src="{{asset('frontend')}}/js/bootstrap.min.js"></script> 
     <script src="{{asset('frontend')}}/js/script.js"></script> 
     @include('task.task_ajax') 
+    @vite(['resources/js/app.js'])
+    <script>        
+       document.addEventListener('DOMContentLoaded', function() {
+        Echo.channel('tasks')
+            .listen('TaskNotification', (data) => {
+                alert(JSON.stringify(data));     
+                const taskNotification = document.createElement('div');
+                taskNotification.innerText = `New Task: ${event.task.body} at ${event.task.alarm_time}`;
+                document.getElementById('notifications').appendChild(taskNotification);
+            });
+        });
+    </script>
 </body>
 </html>
