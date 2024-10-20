@@ -46,9 +46,6 @@
             @endif                 
         </ul>
     </nav>
-    <div id="notifications">
-        
-    </div>
 <div class="row d-flex g-0 vh-84">
     <div class="col-3 bg-greenblue2 pt-3 d-flex flex-column justify-content-between">
         <ul class="navbar-nav px-2 maxh200px overflowY-scroll">
